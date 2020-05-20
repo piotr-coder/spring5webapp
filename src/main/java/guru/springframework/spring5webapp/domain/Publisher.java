@@ -17,8 +17,8 @@ public class Publisher {
     private String zip;
 
     @OneToMany
-    @JoinColumn(name = "publisher_id")
-    private Set<Book> books = new HashSet<>();
+    @JoinColumn(name = "publisher_id")      // it gives Hibernate a hint that on the books we are going to
+    private Set<Book> books = new HashSet<>();  // have publisher ID to reference back to what publisher has.
 
     public Publisher() {
     }
